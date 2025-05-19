@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="jumbotron text-center text-white p-5 rounded">
+
+            <h1 class="display-4"> Money Manager</h1>
+            <p class="lead">Aplicația web pentru administrarea finanțelor tale.</p>
+            <hr class="my-4">
+
+            <a class="btn btn-light btn-lg" href="{% url 'intro' %}" role="button">Află mai multe</a>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,6 +1,8 @@
 {% load static %}
 <nav id="navbar-example3" class="navbar navbar-expand-lg bg-body-primary px-4 mb-4">
-    <a class="navbar-brand" href="#">Money Manager</a>
+    <a class="navbar-brand" href="{% url 'home' %}">MoneyManager</a>
+    {% if user.is_authenticated %}
+    <a class="navbar-brand" href="#">Dashboard</a>
     <ul class="nav nav-pills">
         <li class="nav-item">
             <a class="nav-link" href="#">Bugetul curent</a>
@@ -11,18 +13,31 @@
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Categorii</a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Third</a></li>
-                <li><a class="dropdown-item" href="#">Fourth</a></li>
+                <li><a class="dropdown-item" href="#">Adăugare cheltuială</a></li>
                 <li>
                     <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="#">Fifth</a></li>
+                <li><a class="dropdown-item" href="#">Adăugare venit</a></li>
+
+
             </ul>
         </li>
     </ul>
+    {% endif %}
 
     <div class="ms-auto auth-buttons">
-    <a class="btn btn-primary login-btn" href="#">Login</a>
-    <a class="btn btn-primary signup-btn" href="#">Sign up</a>
+        {% if user.is_authenticated %}
+                    <form method="POST" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-secondary" style="background-color: #0B0C10; color: white;"
+    onmouseover="this.style.backgroundColor='#3AAFA9';"
+    onmouseout="this.style.backgroundColor='#0B0C10';"
+>Logout,{{ user.username }}</button>
+                    </form>
+               {% else %}
+
+    <a class="btn btn-primary login-btn" href="{% url 'login' %}">Login</a>
+    <a class="btn btn-primary signup-btn" href="{% url 'create-user' %}">Sign up</a>
+    {% endif %}
 </div>
 </nav>

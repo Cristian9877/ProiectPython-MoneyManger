@@ -1,0 +1,1 @@
+parola_mea='egtw goxp uwkv bsdv'

@@ -5,32 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intro</title>
-    <link rel="stylesheet" href="{% static 'css/my_style1.css' %}?v=1.0.1">
+    <link rel="stylesheet" href="{% static 'css/my_style1.css' %}?v=2.0">
 </head>
 <body>
-    <div class="container">
-        <h1>Bine ai venit la Money Manager!</h1>
-        <p>
-    Aplicația Money Manager este concepută pentru a simplifica modul în care îți gestionezi viața financiară. Cu o
-    interfață intuitivă și instrumente puternice, Money Manager îți permite să urmărești eficient veniturile,
-    cheltuielile și obiectivele de economisire — ajutându-te să rămâi în controlul bugetului tău personal. Poți
-    categoriza cu ușurință tranzacțiile, seta limite de cheltuieli și primi informații vizuale despre obiceiurile tale financiare.
-</p>
-<p>
-    Fie că economisești pentru o achiziție importantă, vrei să reduci cheltuielile inutile sau pur și simplu încerci să
-    menții disciplina financiară, Money Manager îți oferă instrumentele de care ai nevoie pentru a reuși. Această aplicație
-    este adaptată atât pentru persoane fizice, cât și pentru familii, făcând mai ușoară gestionarea finanțelor împreună.
-</p>
-<p>
-    Prin utilizarea aplicației Money Manager, vei înțelege mai clar unde merg banii tăi, oferindu-ți puterea de a lua
-    decizii informate și de a lucra pentru a-ți atinge obiectivele financiare. Începe acum călătoria spre libertatea financiară cu Money Manager!
-</p>
-        <div class="buttons">
-            <a href="{% url 'home' %}" class="btn btn-home">Inapoi</a>
-            {% if not user.is_authenticated %}
+<div class="container">
+    <h1>Welcome to Money Manager!</h1>
+    <p>
+        The Money Manager app is designed to simplify the way you manage your financial life. With an intuitive
+        interface and powerful tools, Money Manager allows you to efficiently track your income, expenses, and savings
+        goals — helping you stay in control of your personal budget. You can easily categorize transactions, set
+        spending limits, and get visual insights into your financial habits.
+    </p>
+    <p>
+        Whether you're saving for an important purchase, trying to cut unnecessary expenses, or simply looking to
+        maintain financial discipline, Money Manager provides the tools you need to succeed. This app is tailored for
+        both individuals and families, making it easier to manage finances together.
+    </p>
+    <p>
+        By using the Money Manager app, you’ll gain a clearer understanding of where your money goes, giving you the
+        power to make informed decisions and work towards achieving your financial goals. Start your journey to
+        financial freedom today with Money Manager!
+    </p>
+
+    <div class="buttons">
+        <a href="{% url 'home' %}" class="btn btn-home">Back</a>
+        {% if not user.is_authenticated %}
             <a href="{% url 'create-user' %}" class="btn btn-signup">Sign Up</a>
-            {% endif %}
-        </div>
+        {% endif %}
     </div>
+</div>
 </body>
 </html>

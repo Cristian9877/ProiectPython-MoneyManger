@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %} List of transactions {% endblock %}
+{% block content %}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                {% if all_transactions %}
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Amount</th>
+                                <th>Details</th>
+                                <th>Transaction type</th>
+                                <th>Date</th>
+                                <th>Last Updated</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for transaction in all_transactions %}
+                                <tr>
+                                    <td> {{ transaction.amount }} EURO</td>
+                                    <td> {{ transaction.details }}</td>
+
+                                    <td> {{ transaction.transaction_type }}  </td>
+                                    <td>
+                                        {{ transaction.updated_at|date:"d-m-Y H:i:s" }}
+                                    </td>
+                                <td>
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                        more actions
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="{% url 'update-transaction' transaction.id %}">Update</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'delete-transaction' transaction.id %}">Delete</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'details-transaction' transaction.id %}">View infos</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                {% else %}
+                    <p>No transactions available for your account.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

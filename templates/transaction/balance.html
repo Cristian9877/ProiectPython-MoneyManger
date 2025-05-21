@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="text-center">Your Balance</h1>
+
+<div class="balance-info text-center">
+    <p>
+        Your current balance:
+        <strong
+            style="color: {% if balance < 0 %}red{% else %}black{% endif %};">
+            {{ balance }} EURO
+        </strong>
+    </p>
+</div>
+
+<div class="email-info text-center mt-4">
+    <p>
+        Upon your request, you can receive an email with the details of all your
+        transactions and your account balance.
+    </p>
+    <form method="POST" action="{% url 'send-transactions-email' %}">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-dark">Request Email</button>
+    </form>
+</div>
+{% endblock %}
+
+

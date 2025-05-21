@@ -1,116 +1,108 @@
 body {
-            background-color: white;
-            font-family: Arial, sans-serif;
-        }
-
-        .navbar {
-            background-color: #3AAFA9;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar-brand {
-            font-weight: bold;
-            color: #17252A;
-        }
-
-        .nav-link {
-            color: white;
-            font-size: 1rem;
-        }
-
-        .nav-link:hover {
-            color: #17252A;
-        }
-
-        .dropdown-menu {
-            background-color: #ffffff;
-            border: 1px solid lightgray;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .dropdown-item {
-            padding: 0.75rem 1.5rem;
-            font-size: 1rem;
-            color: #495057;
-        }
-
-        .dropdown-item:hover {
-            background-color: #e9ecef;
-            color: #212529;
-        }
-
-        .dropdown-divider {
-            border-color: #dee2e6;
-        }
-
-        .content {
-            padding: 3rem;
-        }
-
-        .text-center {background-color: white;
-
-
-
-        }
- .jumbotron {
-    background-color: #3AAFA9; /* Bootstrap primary color (blue) */
-    color: white; /* White text */
+    background-color: white;
+    font-family: Arial, sans-serif;
 }
 
-/* Jumbotron heading (h1) color */
+.navbar {
+    background-color: #3AAFA9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #17252A;
+}
+
+.nav-link {
+    color: white;
+    font-size: 1rem;
+}
+
+.nav-link:hover {
+    color: #17252A;
+}
+
+.dropdown-menu {
+    background-color: #ffffff;
+    border: 1px solid lightgray;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #495057;
+}
+
+.dropdown-item:hover {
+    background-color: #e9ecef;
+    color: #212529;
+}
+
+.dropdown-divider {
+    border-color: #dee2e6;
+}
+
+.content {
+    padding: 3rem;
+}
+
+.text-center {
+    background-color: white;
+}
+
+.jumbotron {
+    background-color: #3AAFA9;
+    color: white;
+}
+
+
 .jumbotron h1 {
-    color: #ffffff; /* White text */
+    color: #ffffff;
 }
 
-/* Jumbotron paragraph color */
 .jumbotron p {
-    color: #17252A; /* Light gray text */
-}
+    color: #17252A;}
 
-/* Button color inside the jumbotron */
-.jumbotron .btn-light {
-    background-color:#17252A ; /* Light gray background */
-    color: white; /* Blue text */
-    border: none; /* Remove border */
-}
-.jumbotron .btn-light:hover {
-    background-color:#3AAFA9 ; /* Light gray background */
-    color:#17252A; /* Blue text */
-    border: black solid 1px ;
-}
-/* Style for the container */
-.auth-buttons {
-    margin-left: auto; /* Retain Bootstrap's ms-auto behavior */
-}
+    .jumbotron .btn-light {
+        background-color: #17252A;
+        color: white;
+        border: none;
+    }
 
-/* Style for the Login button */
-.auth-buttons .login-btn {
-    background-color: #17252A; /* Gray background */
-    color: #ffffff; /* White text */
-    border: none; /* Remove border */
-}
+    .jumbotron .btn-light:hover {
+        background-color: #3AAFA9;
+        color: #17252A;
+        border: black solid 1px;
+    }
 
-/* Hover effect for the Login button */
-.auth-buttons .login-btn:hover {
-    background-color: #3AAFA9; /* Darker gray on hover */
-    color: #ffffff; /* Ensure text remains white */
-    border: black solid 1px ;
-}
-
-/* Style for the Sign up button */
-.auth-buttons .signup-btn {
-    background-color: #17252A; /* Blue background */
-    color: #ffffff; /* White text */
-    border: none; /* Remove border */
-}
-
-/* Hover effect for the Sign up button */
-.auth-buttons .signup-btn:hover {
-    background-color: #3AAFA9; /* Darker blue on hover */
-    color: #ffffff; /* Ensure text remains white */
-    border: black solid 1px ;
-}
+    .auth-buttons {
+        margin-left: auto;
+    }
 
 
+    .auth-buttons .login-btn {
+        background-color: #0B0C10;
+        color: #ffffff;
+        border: none;
+    }
 
+    .auth-buttons .login-btn:hover {
+        background-color: #3AAFA9;
+        color: #ffffff;
+        border: black solid 1px;
+    }
+
+    .auth-buttons .signup-btn {
+        background-color: #0B0C10;
+        color: #ffffff;
+        border: none;
+    }
+
+
+    .auth-buttons .signup-btn:hover {
+        background-color: #3AAFA9;
+        color: #ffffff;
+        border: black solid 1px;
+    }

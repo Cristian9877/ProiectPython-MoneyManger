@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %} Update {{ transaction }} {% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-md-8 offset-md-2">
+                 <br><br>
+                  <div class="card">
+                      <div class="card-header">
+                          <h3 class="text-center">Update </h3>
+                      </div>
+
+                      <form method="POST">
+                          {% csrf_token %}
+                          <div class="card-body">
+                              <p>Amount: {{ transaction.amount }}EURO</p>
+                              <p>Details: {{ transaction.details }}</p>
+                              <p>Date: {{ transaction.date }}</p>
+                              <p>Type: {{ transaction.transaction_type }}</p>
+                              {{ form }}
+                          </div>
+                          <div class="card-footer text-center">
+                              <button type="submit" class="btn btn-outline-success">UPDATE</button>
+                              <a href="{% url 'list-transactions' %}" class="btn btn-outline-danger">Cancel</a>
+                          </div>
+                      </form>
+                  </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

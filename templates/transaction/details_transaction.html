@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Details of {{ transaction }}{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-body text-center">
+            <p class="text-muted mb-3 fw-bold fs-4">{{ transaction.transaction_type|capfirst }}</p>
+            <ul class="list-group list-group-flush text-start">
+            <li class="list-group-item"><strong>Amount:</strong> {{ transaction.amount }}Euro</li>
+            <li class="list-group-item"><strong>Details:</strong> {{ transaction.details }}</li>
+            <li class="list-group-item"><strong>Date:</strong> {{ transaction.date}}</li>
+          </ul>
+
+
+          <div class="mt-4">
+            <a href="{% url 'list-transactions' %}" class="btn btn-outline-secondary">Back to List</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
